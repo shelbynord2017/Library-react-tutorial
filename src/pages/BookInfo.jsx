@@ -11,6 +11,7 @@ const BookInfo = ({ books })=> {
     const book = books.find(book => +book.id === +id)
     console.log(book)
 
+
   return (
     <div id="books__body">
         <main id="books__main">
