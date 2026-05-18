@@ -6,20 +6,18 @@ import Price from './Price';
 
 const Book = ({ book }) => {
   const [img, setImg] = useState();
-  const mountedRef = useRef(true);
-
+  
   useEffect(() => {
+    setImg(null)
+
     const image = new Image();
     image.src = book.url;
+
     image.onload = () => {
-      if (mountedRef.current) {
-        setImg(image);
+      setImg(image);
       }
-    };
-    return () => {
-      mountedRef.current = false;
-    };
-  }, [book.url]);
+    }, [book.url]);
+  ;
 
   return (
     <div className="book">
@@ -48,6 +46,6 @@ const Book = ({ book }) => {
       )}
     </div>
   );
-};
+}
 
 export default Book;
