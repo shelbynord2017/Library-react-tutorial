@@ -9,6 +9,7 @@ const Book = ({ book }) => {
 
   useEffect(() => {
     setImg(null)
+    
     const image = new Image();
     image.src = book.url;
     image.onload = () => {
