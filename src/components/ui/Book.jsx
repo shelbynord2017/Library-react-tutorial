@@ -12,7 +12,6 @@ const Book = ({ book }) => {
     const image = new Image();
     image.src = book.url;
     image.onload = () => {
-        setImg(image)
     };
 }, [book.url]);
   
